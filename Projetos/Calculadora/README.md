@@ -14,7 +14,7 @@ Projeto prático do curso Guia do programador para colocar em prática alguns co
 No GiF abaixo é demonstrado as funcionalidades presente no menu da calculadora: <b>1- Soma, 2- Subtração, 3- Divisão, 4- Multiplicação, 5- Potência, 6- Raiz e 7- Sair.</b>
 </div> &ensp;
 <p align="center">
-  <img width="600" height="470" src="https://github.com/WelbertJr/Bootcamp-DIO---LocalizaLabs-.NET-Developer-2/blob/main/Imagens/ezgif.com-gif-maker.gif">
+  <img width="600" height="470" src="https://github.com/WelbertJr/Projetos-CShap/blob/main/Imagens/ezgif.com-gif-maker%20(2).gif">
   </p><br/>
 
 ## Tecnologias utilizadas
