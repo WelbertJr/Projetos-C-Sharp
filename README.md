@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Projetos-CShap</h1>
+  <h1>Projetos C Sharp</h1>
   </div>
 <p align="justify">
 Repositório com os projetos CSharp que estou desenvolvendo ao longo da minha jornada de aprendizado em C# e .NET.
