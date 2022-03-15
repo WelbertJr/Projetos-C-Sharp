@@ -1,7 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Spectre.Console;
 
 namespace IMC
 {
@@ -14,12 +15,23 @@ namespace IMC
             bool escolheusair = false;
             while (!escolheusair)
             {
-                Console.WriteLine("Bem-vinda a calculadora de IMC!\n");
-                Console.WriteLine("Atenção! Esta calculadora mede o IMC de pessoas acima de 18 anos.");
-                Console.WriteLine("Escolha uma opção abaixo:");
-                Console.WriteLine("1-Calcular o IMC de um paciente\n2-Sair");
-                
-                
+
+                var table = new Table();
+                var panel = new Panel(table);
+                panel.Border = BoxBorder.Rounded;
+
+                table.Centered();
+                table.AddColumn(new TableColumn(new Markup("[slowblink #87005f]Bem-vinda a calculadora de IMC![/]\n")));
+                table.Columns[0].Centered();
+                table.AddRow("[yellow]Atenção! Esta calculadora mede o IMC de pessoas acima de 18 anos.[/]\n");
+                table.AddRow("[#5f87ff]Escolha uma opção abaixo:[/]\n");
+                table.AddRow("[#5f87ff]1-Calcular o IMC de um paciente[/]\n");
+                table.AddRow("[#5f87ff]2-Sair[/]");
+
+
+                AnsiConsole.Write(table);
+
+            
                 {
                     Menu opcao = (Menu)int.Parse(Console.ReadLine());
                     switch (opcao)
@@ -31,8 +43,8 @@ namespace IMC
                             escolheusair = true;
                             break;
                         default:
-                            Console.WriteLine("Essa opção não existe!\n");
-                            Console.WriteLine("Aperte ENTER para voltar para o menu");
+                            Console.WriteLine("[red]Essa opção não existe![/]\n");
+                            Console.WriteLine("[yellow]Aperte ENTER para voltar para o menu[/]");
                             Console.ReadLine();
                             break;
 
@@ -45,38 +57,41 @@ namespace IMC
 
         static void Calculo() 
         {
-            Console.WriteLine("Digite o peso do paciente em KG: ");
+
+            AnsiConsole.Markup("[yellow]Digite o peso do paciente em KG: [/]");
             float a = float.Parse(Console.ReadLine());
-            Console.WriteLine("Digite a altura do paciente em metros: ");
+            AnsiConsole.Markup("[yellow]Digite a altura do paciente em metros: [/]");
             float b = float.Parse(Console.ReadLine());
             float resultado = a / (float)Math.Pow(b, 2);
             if (resultado <= 18.5)
             {
-                Console.WriteLine("O IMC do paciente é: " + Math.Round(resultado, 1).ToString() + " e ele tem o peso abaixo do normal :(");
+                AnsiConsole.Markup("\n[red]O IMC do paciente é: " + Math.Round(resultado, 1).ToString() + ", e ele tem o peso abaixo do normal :([/]\n\n");
             }
             else if ((resultado > 18.5) && (resultado < 25))
             {
-                Console.WriteLine("O IMC do paciente é: " + Math.Round(resultado, 1).ToString() + " e ele tem o peso ideal :)");
+                AnsiConsole.Markup("\n[green]O IMC do paciente é: " + Math.Round(resultado, 1).ToString() + ", e ele tem o peso ideal :)[/]\n\n");
             }
             else if ((resultado >= 25) && (resultado < 30))
             {
-                Console.WriteLine("O IMC do paciente é: " + Math.Round(resultado, 1).ToString() + " e ele está sobre o peso ideal :(");
+                AnsiConsole.Markup("\n[red]O IMC do paciente é: " + Math.Round(resultado, 1).ToString() + ", e ele está sobre o peso ideal :(\n\n[/]");
             }
             else if ((resultado >= 30) && (resultado < 35))
             {
-                Console.WriteLine("O IMC do paciente é: " + Math.Round(resultado, 1).ToString() + " e ele possui obesidade de grau I :(");
+                AnsiConsole.Markup("\n[red]O IMC do paciente é: " + Math.Round(resultado, 1).ToString() + ", e ele possui obesidade de grau I :(\n\n[/]");
             }
             else if ((resultado >= 35) && (resultado < 40))
             {
-                Console.WriteLine("O IMC do paciente é: " + Math.Round(resultado, 1).ToString() + " e ele possui obesidade de grau II! :(");
+                AnsiConsole.Markup("\n[red]O IMC do paciente é: " + Math.Round(resultado, 1).ToString() + ", e ele possui obesidade de grau II! :(\n\n[/]");
             }
             else if (resultado >= 40)
             {
-                Console.WriteLine("O IMC do paciente é: " + Math.Round(resultado, 1).ToString() + " e ele possui obesidade de grau III! :(");
+                AnsiConsole.Markup("\n[red]O IMC do paciente é: " + Math.Round(resultado, 1).ToString() + ", e ele possui obesidade de grau III! :(\n\n[/]");
             }
-            Console.WriteLine("Aperte ENTER para voltar para o menu");
+            AnsiConsole.Markup("[yellow]Aperte ENTER para voltar para o menu![/]");
             Console.ReadLine();
 
         }
       }
     }
+
+           
