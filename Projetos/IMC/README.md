@@ -3,8 +3,9 @@
   </div>
   
 ## Sobre o projeto
+
 <p align="justify">
-  Aplicativo console desenvolvido para se efetuar o cálculo do índice sua massa corporal. Essa é a forma mais popular para avaliar a adiposidade corporal. A consta é simples, o índice é encontrado dividindo-se o peso em quilogramas pela altura em metros elevada ao quadrado. Ou seja, Kg/m². Para adultos, o subrepeso é considerado quando o resultado do IMC é maior ou igual a 25 - obesidade, maior ou igual a 30. </p> &ensp;
+  Aplicativo console desenvolvido para se efetuar o cálculo do índice sua massa corporal. Essa é a forma mais popular para avaliar a adiposidade corporal. A consta é simples, o índice é encontrado dividindo-se o peso em quilogramas pela altura em metros elevada ao quadrado. Ou seja, Kg/m². Para adultos, o subrepeso é considerado quando o resultado do IMC é maior ou igual a 25 - obesidade, maior ou igual a 30. Foi utilizada a biblioteca <a href="https://spectreconsole.net/">Spectre.Console</a> para a estilização do aplicativo no console. </p> &ensp;
   
   <div align="justify">
   <img width="1300" src="https://github.com/WelbertJr/Projetos-C-Sharp/blob/main/Imagens/Tabela%20de%20c%C3%A1lculo%20IMC.png" alt="Tabela de cálculo IMC">
@@ -17,7 +18,7 @@
   </p> &ensp;
   
 <div align="center">
-  <img width="600" height="470" src="https://github.com/WelbertJr/Projetos-C-Sharp/blob/main/Imagens/IMC.gif">
+  <img width="800" height="600" src="https://github.com/WelbertJr/Projetos-C-Sharp/blob/main/Imagens/ezgif.com-gif-maker%20(4).gif">
   </div><br/>
   
   ## Tecnologias utilizadas
